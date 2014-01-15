@@ -30,7 +30,7 @@
             </div>
             
             <div class="jumbotron">
-                <h1>Selecciona el grado de dificultad</h1>
+                <h1>Seleccioná el grado de dificultad</h1>
                 <hr>
                 <div class="btn-group-vertical" data-toggle="buttons">
                     <label class="btn btn-danger" onclick="window.open('tablero.html?nivel=dificil','_self')">
