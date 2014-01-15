@@ -1,3 +1,14 @@
+<?php
+	//Iniciamos sesi�n
+	session_start();
+	
+	/*
+	 * Verificamos si la variable de sesi�n "jugador" existe, y si es as� lo borramos
+	 * Esto hace que el juego se reinicie cada que vez que ingresamos a esta pantalla
+	 */
+	if (isset($_SESSION['juego']))
+		unset($_SESSION['juego'])
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,8 +34,8 @@
             <div class="header">
                 <ul class="nav nav-pills pull-right">
                     <li class="active"><a href="#">Inicio</a></li>
-                    <li><a href="dificultad.html">Dificultad</a></li>
-                    <li><a href="tablero.html">Tablero</a></li>
+                    <li><a href="dificultad.php">Dificultad</a></li>
+                    <li><a href="tablero.php">Tablero</a></li>
                 </ul>
                 <h3 class="text-primary">Batalla Naval</h3>
             </div>
@@ -32,7 +43,7 @@
             <div class="jumbotron">
                 <h1>¿Estás listo para el desafío?</h1>
                 <p class="lead">Batalla Naval es un juego que requiere astucia, concentración pero por sobre todo coraje. ¿Crees que podrás ganar el juego? Inténtalo aquí, ¡a hundir toda la flota enemiga!.</p>
-                <p><a class="btn btn-lg btn-primary" href="dificultad.html" role="button">Empezar</a></p>
+                <p><a class="btn btn-lg btn-primary" href="dificultad.php" role="button">Empezar</a></p>
             </div>
             
         </div>

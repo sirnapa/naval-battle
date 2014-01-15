@@ -1,3 +1,14 @@
+<?php
+	//Iniciamos sesi�n
+	session_start();
+	
+	/*
+	 * Verificamos si la variable de sesi�n "jugador" existe, y si es as� lo borramos
+	 * Esto hace que el juego se reinicie cada que vez que ingresamos a esta pantalla
+	 */
+	if (isset($_SESSION['juego']))
+		unset($_SESSION['juego'])
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,9 +33,9 @@
             
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.php">Inicio</a></li>
                     <li class="active"><a href="#">Dificultad</a></li>
-                    <li><a href="tablero.html">Tablero</a></li>
+                    <li><a href="tablero.php">Tablero</a></li>
                 </ul>
                 <h3 class="text-primary">Batalla Naval</h3>
             </div>
@@ -33,13 +44,13 @@
                 <h1>Seleccioná el grado de dificultad</h1>
                 <hr>
                 <div class="btn-group-vertical" data-toggle="buttons">
-                    <label class="btn btn-danger" onclick="window.open('tablero.html?nivel=dificil','_self')">
+                    <label class="btn btn-danger" onclick="window.open('tablero.php?nivel=dificil','_self')">
                         <input type="radio" name="gradoDificultad" id="nivelFacil"> ¡Que sea bien difícil!
                     </label>
-                    <label class="btn btn-default" onclick="window.open('tablero.html?nivel=medio','_self')">
+                    <label class="btn btn-default" onclick="window.open('tablero.php?nivel=medio','_self')">
                         <input type="radio" name="gradoDificultad" id="nivelMedio"> Mejor un nivel medio accesible
                     </label>
-                    <label class="btn btn-primary" onclick="window.open('tablero.html?nivel=facil','_self')">
+                    <label class="btn btn-primary" onclick="window.open('tablero.php?nivel=facil','_self')">
                         <input type="radio" name="gradoDificultad" id="nivelMedio"> ¡Que sea fácil nomás!
                     </label>
                 </div>
