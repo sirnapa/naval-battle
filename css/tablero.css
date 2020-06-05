@@ -1,0 +1,31 @@
+.tablero{
+    border: none;
+}
+.tablero tr:first-child td,
+.tablero tr td:first-child{
+    border: none;
+}
+.tablero tr:first-child td:hover,
+.tablero tr td:first-child:hover{
+    cursor: default;
+    background: none;
+    color: #000000;
+}
+.tablero tr td{
+    cursor: pointer;
+}
+.tablero tr td:hover{
+    background: #c12e2a;
+    color: #ffffff;
+}
+.tablero tr td.agua, .tablero tr td.acierto{
+    cursor: default;
+}
+.tablero tr td.agua{
+    color: #428bca;
+    background: #ffffff;
+}
+.tablero tr td.acierto{
+    background: #ffffff;
+    color: #c12e2a;
+}
