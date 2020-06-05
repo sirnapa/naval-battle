@@ -1,4 +1,4 @@
-oitaller
+Naval battle
 ========
 
-La finalidad de este proyecto es servir de ejemplo para el Taller de la OI.
+Demo game for students who learning programming
